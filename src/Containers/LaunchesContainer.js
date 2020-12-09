@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import LaunchesList from '../Components/LaunchesList'
 
 const LaunchesContainer = (props) => {
 
@@ -25,7 +26,7 @@ const LaunchesContainer = (props) => {
     }
     
     return(
-        <p>I am a container</p>
+        <LaunchesList launches={launches} rockets={rockets}></LaunchesList>
     )
 }
 
