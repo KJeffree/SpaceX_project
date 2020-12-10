@@ -5,10 +5,15 @@ import Moment from 'react-moment'
 const LaunchItem = (props) => {
     return (
         <React.Fragment>
-            <p>Launch name: {props.launch.name}</p>
-            <p>Rocket name: {props.rocket.name}</p>
-            <p>Launch date: <Moment format="DD MMM YYYY">{props.launch.date_utc}</Moment></p>
-            <p>Flight number: #{props.launch.flight_number}</p>
+            <div className="launch-information">
+                <h3 className="flight-number">#{props.launch.flight_number}</h3>
+                <h3 className="launch-name">{props.launch.name}</h3>
+                <div>
+                    <p className="launch-date"><Moment format="DD MMM YYYY">{props.launch.date_utc}</Moment></p>
+                    <h4 className="rocket-name">{props.rocket.name}</h4>
+                </div>
+            </div>
+            
         </React.Fragment>
         
     )
