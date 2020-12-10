@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import LaunchItem from './LaunchItem'
 
 const LaunchesList = (props) => {
@@ -20,6 +21,11 @@ const LaunchesList = (props) => {
             {launchNodes}
         </React.Fragment>
     )
+}
+
+LaunchesList.propTypes = {
+    rockets: PropTypes.array,
+    launches: PropTypes.array
 }
 
 export default LaunchesList

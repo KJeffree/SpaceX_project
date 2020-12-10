@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Moment from 'react-moment'
 
 const LaunchItem = (props) => {
@@ -11,6 +12,11 @@ const LaunchItem = (props) => {
         </React.Fragment>
         
     )
+}
+
+LaunchItem.propTypes = {
+    rocket: PropTypes.object,
+    launch: PropTypes.object
 }
 
 export default LaunchItem
