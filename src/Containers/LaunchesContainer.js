@@ -5,8 +5,8 @@ const LaunchesContainer = (props) => {
 
     const [launches, setLaunches] = useState([])
     const [rockets, setRockets] = useState([])
-    const [selectedYear, setSelectedYear] = useState(null)
-    const [sortAscending, setSortAscending] = useState(true)
+    // const [selectedYear, setSelectedYear] = useState(null)
+    // const [sortAscending, setSortAscending] = useState(true)
 
     useEffect(() => {
         fetchLaunchData()
