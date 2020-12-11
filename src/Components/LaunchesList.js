@@ -17,9 +17,9 @@ const LaunchesList = (props) => {
         return <LaunchItem key={launch.id} launch={props.launches[index]} rocket={findRocket(launch.rocket)}></LaunchItem>
     })
     return(
-        <React.Fragment>
+        <div className="launch-list">
             {launchNodes}
-        </React.Fragment>
+        </div>
     )
 }
 

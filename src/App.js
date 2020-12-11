@@ -1,4 +1,6 @@
 import './App.css';
+import './public/stylesheet.scss'
+
 import LaunchesContainer from './Containers/LaunchesContainer'
 
 function App() {
