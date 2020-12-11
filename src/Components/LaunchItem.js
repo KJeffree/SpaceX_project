@@ -6,7 +6,7 @@ const LaunchItem = (props) => {
     return (
         <React.Fragment>
             <div className="launch-information">
-                <h3 className="flight-number">#{props.launch.flight_number}</h3>
+                <h2 className="flight-number">#{props.launch.flight_number}</h2>
                 <h3 className="launch-name">{props.launch.name}</h3>
                 <div>
                     <p className="launch-date"><Moment format="DD MMM YYYY">{props.launch.date_utc}</Moment></p>
