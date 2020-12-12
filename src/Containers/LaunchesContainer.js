@@ -11,7 +11,7 @@ const LaunchesContainer = (props) => {
     const [launches, setLaunches] = useState([])
     const [rockets, setRockets] = useState([])
     // const [selectedYear, setSelectedYear] = useState(null)
-    // const [sortAscending, setSortAscending] = useState(true)
+    const [sortAscending, setSortAscending] = useState(true)
 
     useEffect(() => {
         fetchLaunchData()
@@ -29,7 +29,16 @@ const LaunchesContainer = (props) => {
             .then(response => response.json())
             .then(rockets => setRockets(rockets))
     }
-    
+
+    const onSortButtonClick = () => {
+        setSortAscending(!sortAscending)
+        if (sortAscending){
+            setLaunches(launches.sort((a, b) => new Date(a.date_utc) - new Date(b.date_utc)))
+        } else {
+            setLaunches(launches.sort((a, b) => new Date(b.date_utc) - new Date(a.date_utc)))
+        }
+    }
+
     return(
         <>
         <div className="header">
@@ -41,7 +50,7 @@ const LaunchesContainer = (props) => {
         </div>
         <div className="filtering">
             <button><b>Filter by Year</b><img alt="select icon" className="icon" src={selectIcon}></img></button>
-            <button><b>Sort Descending</b><img alt="sort icon" className="icon" src={sortIcon}></img></button>
+            <button onClick={onSortButtonClick}><b>Sort {sortAscending ? "Descending" : "Ascending"}</b><img alt="sort icon" className="icon" src={sortIcon}></img></button>
         </div>
         <div className="main-section">
             <img src={launchImage} alt="rocket launch" className="launch-image"></img>
