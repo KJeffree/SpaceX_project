@@ -35,7 +35,7 @@ const LaunchesContainer = (props) => {
 
     const getLaunchesToDisplay = () => {
         let launchesArray = launches
-        if (selectedYear != "All Years"){
+        if (selectedYear !== "All Years"){
             launchesArray = launchesArray.filter(launch => launch.date_utc.substring(0, 4) === selectedYear)
         }
         if (sortAscending){
@@ -73,7 +73,7 @@ const LaunchesContainer = (props) => {
                 <img className="logo" alt="SpaceX logo" src={logo}></img>
                 <span className="page-name">LAUNCHES</span>
             </div>
-            <button onClick={getUniqueYears} className="button" id="reload-data-button">Reload Data<img alt="reload icon" className="icon" src={refreshIcon}></img></button>
+            <button onClick={fetchLaunchData} className="button" id="reload-data-button">Reload Data<img alt="reload icon" className="icon" src={refreshIcon}></img></button>
         </div>
         <div className="filtering">
             <p className="filter-clear" hidden={selectedYear === "All Years"} onClick={resetSelectedYear}>Clear Filter x</p>
