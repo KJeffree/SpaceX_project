@@ -90,7 +90,7 @@ code {
   margin: 0px 40px 0px 40px;
 }
 
-.reload-data-button {
+#reload-data-button {
   margin: 30px 0px 30px 30px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -99,21 +99,34 @@ code {
 
 .icon {
   margin: auto;
-  padding: 8px;
-}
-
-b {
-  margin: auto;
   padding-left: 8px;
 }
 
-button {
+select {
+  display: none;
+  -webkit-appearance: none;
+  background: url('./public/assets/icon/select.png') 90% no-repeat;
+  position: relative;
+}
+
+.filter-clear {
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button {
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   font-family: 'Brandon Grotesque';
   border: none;
+  min-width: 110px;
   max-height: 40px;
   margin: 5px;
+  line-height: 40px;
+  padding: 0px 12px 0px 12px;
+  text-align: center;
   background-color:  #215184;
   color: white;
 }
