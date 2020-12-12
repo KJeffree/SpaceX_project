@@ -34,14 +34,16 @@ const LaunchesContainer = (props) => {
     }
 
     const getLaunchesToDisplay = () => {
+        let launchesArray = launches
         if (selectedYear != "All Years"){
-            return launches.filter(launch => launch.date_utc.substring(0, 4) === selectedYear)
+            launchesArray = launchesArray.filter(launch => launch.date_utc.substring(0, 4) === selectedYear)
         }
         if (sortAscending){
-            return launches.sort((a, b) => new Date(a.date_utc) - new Date(b.date_utc))
+            launchesArray = launchesArray.sort((a, b) => new Date(a.date_utc) - new Date(b.date_utc))
         } else {
-            return launches.sort((a, b) => new Date(b.date_utc) - new Date(a.date_utc))
+            launchesArray = launchesArray.sort((a, b) => new Date(b.date_utc) - new Date(a.date_utc))
         }
+        return launchesArray
     }
 
     const getUniqueYears = () => {
