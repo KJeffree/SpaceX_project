@@ -26,15 +26,15 @@ const MenuItems = ({launches, selectedYear, onSortButtonClick, onYearSelected, r
                 <img className="logo" alt="SpaceX logo" src={logo}></img>
                 <span className="page-name">LAUNCHES</span>
             </div>
-            <button onClick={fetchLaunchData} className="button" id="reload-data-button">Reload Data<img alt="reload icon" className="icon" src={refreshIcon}></img></button>
+            <button onClick={fetchLaunchData} className="button" id="reload-data-button">Reload Data<img alt="" className="icon" src={refreshIcon}></img></button>
         </div>
         <div className="filtering">
             <p className="filter-clear" hidden={selectedYear === "All Years"} onClick={resetSelectedYear}>Clear Filter x</p>
             <select className="button" onChange={onYearSelected} value={selectedYear}>
-                <option value="All Years" disabled>Fliter by Year</option>
+                <option value="All Years" disabled>Filter by Year</option>
                 {optionNodes()}
             </select>
-            <button className="button" onClick={onSortButtonClick}>Sort {sortAscending ? "Descending" : "Ascending"}<img alt="sort icon" className="icon" src={sortIcon}></img></button>
+            <button className="button" onClick={onSortButtonClick}>Sort {sortAscending ? "Descending" : "Ascending"}<img alt="" className="icon" src={sortIcon}></img></button>
         </div>
         </>
     )

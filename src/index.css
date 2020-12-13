@@ -131,6 +131,28 @@ select {
   color: white;
 }
 
+@media (max-width: 1000px){
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .launch-image{
+    width: 50%;
+    margin: auto;
+  }
+
+  .launch-list {
+    margin: 0px 10px 0px 10px;
+  }
+
+  .filtering {
+    margin: 0px 10px 5px 10px;
+  }
+}
+
 @font-face {
   font-family: 'Brandon Grotesque';
   src: url('public/assets/font/BrandonGrotesque-Bold.woff2') format('woff2'),

@@ -63,10 +63,10 @@ const LaunchesContainer = (props) => {
             selectedYear={selectedYear}
             sortAscending={sortAscending}
         ></MenuItems>
-        <div className="main-section">
+        <main className="main-section">
             <img src={launchImage} alt="rocket launch" className="launch-image"></img>
             <LaunchesList launches={getLaunchesToDisplay()} rockets={rockets}></LaunchesList>
-        </div>
+        </main>
             
         </>
     )
